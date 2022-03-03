@@ -172,7 +172,7 @@ export default function Login() {
             </div>
 
             <div className="test relative w-full flex flex-col">
-              <label className="text-blue-900 font-medium" htmlFor="email ">
+              <label className="text-blue-200 font-medium" htmlFor="email ">
                 Password
               </label>
               <input
@@ -197,7 +197,7 @@ export default function Login() {
             </button>
           </form>
 
-          <p className="w-full md:w-3/5 ">
+          <p className="w-full md:w-3/5 text-blue-200">
             don't have an account?{" "}
             <span className="text-red-200 font-bold">Sign up</span>
           </p>
