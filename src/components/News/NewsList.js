@@ -1,5 +1,5 @@
 // import { Link } from "react-router-dom";
-import news_style from "./NewsList.scss"
+import './NewsList.scss'
 
 const NewsList = ({ news }) => {
     return (

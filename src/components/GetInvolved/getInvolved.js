@@ -1,6 +1,7 @@
 import arrow from '../../assets/arrow_drop_up.png';
 import React, { useState } from "react";
 import add from '../../assets/add.png';
+import './GetInvolved.scss'
 
 function GetInvolved() {
 

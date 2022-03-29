@@ -1,6 +1,7 @@
 import React from 'react';
 import previous from '../../assets/add.png'; //prev pic
 import next from '../../assets/add.png'; //next pic
+import './UpcomingEvents.scss';
 import { useState } from 'react';
 
 export const UpcomingEvents = ({ events }) => {
