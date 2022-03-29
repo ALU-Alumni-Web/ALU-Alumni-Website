@@ -22,7 +22,6 @@ module.exports = {
         },
         darkShadow: "#1D1B1A",
       },
-      
     },
   },
   plugins: [],

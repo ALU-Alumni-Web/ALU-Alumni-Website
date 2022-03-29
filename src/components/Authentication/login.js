@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import { ToastContainer, toast, Zoom, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import google from "../assets/google.png";
+import google from "../../assets/google.png";
 import * as Yup from "yup";
 import { useHistory } from "react-router-dom";
 
@@ -12,9 +12,8 @@ export default function Login() {
 
   const [loading, setLoading] = useState(false);
 
-  /*  ======================================== Google auth ====================================================== */
-  const clientId =
-    "583371354557-oj2mn29eih6004btma89tba8f50s52k7.apps.googleusercontent.com";
+  /*  Google auth */
+  const clientId = "583371354557-oj2mn29eih6004btma89tba8f50s52k7.apps.googleusercontent.com";
 
   const [showLoginButton, setShowLoginButton] = useState(true);
   const [showLogoutButton, setShowLogoutButton] = useState(false);
@@ -36,7 +35,7 @@ export default function Login() {
     history.push("/login");
   };
 
-  /* ============================ Google auth render button ========================================*/
+  /* Google auth render button */
 
   function googlebutton(renderProps) {
     return (
@@ -55,22 +54,22 @@ export default function Login() {
       <button
         className="h-full flex items-center shadow-6xl text-blue-200 font-semibold text-text"
         onClick={() => renderProps.onClick()}
-      > 
-      <div className="w-7 h-7 rounded-full bg-gray-200 mr-2 ">
-        <img
-          
-          src={google} hidden
-          alt=""
-        />
+      >
+        <div className="w-7 h-7 rounded-full bg-gray-200 mr-2 ">
+          <img
+
+            src={google} hidden
+            alt=""
+          />
         </div>
         <div className="bg-gray-200 rounded-lg text-gray-200">
-        Sign up with google
+          Sign up with google
         </div>
       </button>
     );
   }
 
-  /*================================================  Validation ==========================================*/
+  /* Validation */
 
   const formik = useFormik({
     initialValues: {
@@ -83,7 +82,7 @@ export default function Login() {
     }),
 
 
-    /* ======================================Submti function ============================*/
+    /* Submti function */
     onSubmit: (values) => {
       setLoading(true);
       toast.info("Signed in successfully");
@@ -95,7 +94,6 @@ export default function Login() {
       }, 5000);
     },
   });
-
 
 
   return (
@@ -110,7 +108,7 @@ export default function Login() {
             Sign Up
           </h1>
 
-          {/* ============================= google login ======================================= */}
+          {/* google login */}
 
           <div className="h-9 mt-7 flex flex-row  w-full md:w-3/5 border border-red-100 justify-evenly items-center  ">
             {showLoginButton ? (
@@ -145,7 +143,7 @@ export default function Login() {
             </div>
           </div>
 
-          {/* ============================= form ================================================ */}
+          {/* form */}
 
           <form
             className="w-full md:w-3/5"
@@ -204,7 +202,7 @@ export default function Login() {
         </div>
       )}
 
-      {/*================================================== Skeleton ======================================================*/}
+      {/* Skeleton */}
 
       {loading && (
         <div className="flex flex-row justify-evenly h-screen bg-gray-100 animate-pulse  rounded-lg w-screen">
@@ -251,7 +249,7 @@ export default function Login() {
             >
               <div className="test relative w-full flex flex-col ">
                 <label className="text-gray-300 bg-gray-300 animate-pulse  rounded-lg mt-2 h-2 w-1/3 font-medium" htmlFor="email">
-                  
+
                 </label>
 
                 <input
@@ -269,10 +267,10 @@ export default function Login() {
               </div>
 
               <div className=" test relative w-full flex flex-col">
-            
+
                 <label className="text-gray-300 bg-gray-300 animate-pulse  rounded-lg mt-2 h-2 w-1/3 font-medium" htmlFor="email">
-              
-             
+
+
                 </label>
                 <input
                   className="text-gray-300 bg-gray-300 animate-pulse h-4  rounded-lg mt-2 font-medium"
