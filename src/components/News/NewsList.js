@@ -6,7 +6,6 @@ const NewsList = ({ news }) => {
         <div className="news-highlights">
             <h1>News</h1>
             <div className="news-list">
-
                 {news.map((news_highlight) => (
                     <div className="news-preview" key={news_highlight.id}>
                         {news_highlight.id % 2 !== 0 ?

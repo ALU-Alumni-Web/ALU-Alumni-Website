@@ -3,6 +3,7 @@ import GetInvolved from "../GetInvolved/getInvolved";
 import NewList from "../../components/News/NewsList";
 import './Home.scss';
 import { useState, useEffect } from 'react';
+
 export function Home(props) {
     const [events, setEvents] = useState(null);
     const [news, setNews] = useState(null);

@@ -57,7 +57,6 @@ export default function Login() {
       >
         <div className="w-7 h-7 rounded-full bg-gray-200 mr-2 ">
           <img
-
             src={google} hidden
             alt=""
           />
@@ -70,7 +69,6 @@ export default function Login() {
   }
 
   /* Validation */
-
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -80,7 +78,6 @@ export default function Login() {
       email: Yup.string().email("Invalid Email").required("Email is required"),
       password: Yup.string("confirm password").required("Password is required"),
     }),
-
 
     /* Submti function */
     onSubmit: (values) => {
@@ -109,7 +106,6 @@ export default function Login() {
           </h1>
 
           {/* google login */}
-
           <div className="h-9 mt-7 flex flex-row  w-full md:w-3/5 border border-red-100 justify-evenly items-center  ">
             {showLoginButton ? (
               <GoogleLogin
@@ -144,7 +140,6 @@ export default function Login() {
           </div>
 
           {/* form */}
-
           <form
             className="w-full md:w-3/5"
             action=""
@@ -203,12 +198,10 @@ export default function Login() {
       )}
 
       {/* Skeleton */}
-
       {loading && (
         <div className="flex flex-row justify-evenly h-screen bg-gray-100 animate-pulse  rounded-lg w-screen">
           <div className="flex flex-col justify-center items-center w-2/3 md:w-1/3  ">
             <h1 className="text-gray-200 bg-gray-300 animate-pulse  rounded-lg font-bold h-6 w-5/6"></h1>
-
             <div className="h-9 mt-7 flex flex-row w-full justify-evenly items-center md:w-3/5 ">
               {showLoginButton ? (
                 <GoogleLogin

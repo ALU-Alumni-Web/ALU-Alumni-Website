@@ -8,13 +8,8 @@ export const UpcomingEvents = ({ events }) => {
     const [current, setCurrent] = useState(0);
     const length = events.length;
 
-    const previous_event = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1);
-    };
-
-    const next_event = () => {
-        setCurrent(current === 0 ? length - 1 : current - 1);
-    };
+    const previous_event = () => { setCurrent(current === length - 1 ? 0 : current + 1)};
+    const next_event = () => { setCurrent(current === 0 ? length - 1 : current - 1);};
 
     if (!Array.isArray(events) || events.length <= 0) {
         return null;

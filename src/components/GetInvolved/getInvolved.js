@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import add from '../../assets/add.png';
 import './GetInvolved.scss'
 
-function GetInvolved() {
-
+const GetInvolved = () => {
   const [regional, setRegional] = useState(false);
   const [special, setSpecial] = useState(false);
   const [other, setOther] = useState(false);
@@ -29,7 +28,7 @@ function GetInvolved() {
 
               <button onClick={() => setRegional(!regional)}> <img src={arrow} alt="" /> </button></div>
             {regional ?
-              <div className=' flex flex-col  justify-center '>
+              <div className='flex flex-col  justify-center '>
                 <><h1 className='flex items-center justify-between border-2 border-b-0 border-r-0 border-l-0 '><span className='ml-5' >WEST AFRICA</span> <a href="https://www.linkedin.com/mynetwork/"><img className='mr-3' src={add} alt="" /> </a> </h1>
                   <h1 className='flex items-center justify-between border-2 border-b-0 border-r-0 border-l-0'><span className='ml-5'>RWANDA</span>  <a href="https://www.linkedin.com/mynetwork/"><img className='mr-3' src={add} alt="" /> </a> </h1>
                   <h1 className='flex items-center justify-between border-2 border-b-0 border-r-0 border-l-0'><span className='ml-5'>ZIMBABWE</span>  <a href="https://www.linkedin.com/mynetwork/"><img className='mr-3' src={add} alt="" /> </a></h1></>
@@ -48,7 +47,6 @@ function GetInvolved() {
                 </>
               </div>
               : null}
-
           </section>
 
           <section className='w-5/6 md:w-1/2 border-2'>
