@@ -13,7 +13,8 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
 
   /*  Google auth */
-  const clientId = "583371354557-oj2mn29eih6004btma89tba8f50s52k7.apps.googleusercontent.com";
+  const clientId =
+    "583371354557-oj2mn29eih6004btma89tba8f50s52k7.apps.googleusercontent.com";
 
   const [showLoginButton, setShowLoginButton] = useState(true);
   const [showLogoutButton, setShowLogoutButton] = useState(false);
@@ -56,10 +57,7 @@ export default function Login() {
         onClick={() => renderProps.onClick()}
       >
         <div className="w-7 h-7 rounded-full bg-gray-200 mr-2 ">
-          <img
-            src={google} hidden
-            alt=""
-          />
+          <img src={google} hidden alt="" />
         </div>
         <div className="bg-gray-200 rounded-lg text-gray-200">
           Sign up with google
@@ -75,7 +73,9 @@ export default function Login() {
       password: "",
     },
     validationSchema: Yup.object({
-      email: Yup.string().email("Invalid Email").required("Email is required"),
+      email: Yup.string()
+        .email("Invalid Email")
+        .required("Email is required"),
       password: Yup.string("confirm password").required("Password is required"),
     }),
 
@@ -91,7 +91,6 @@ export default function Login() {
       }, 5000);
     },
   });
-
 
   return (
     <div className="flex flex-col justify-center items-center w-screen h-screen">
@@ -227,7 +226,9 @@ export default function Login() {
                 <p></p>
                 <hr className="white" />
               </div>
-              <p className="text-gray-300 bg-gray-300 animate-pulse  w-10 font-bold">or</p>
+              <p className="text-gray-300 bg-gray-300 animate-pulse  w-10 font-bold">
+                or
+              </p>
 
               <div className=" mt-2 grid grid-cols-1 w-1/2 divide-y divide-yellow-500">
                 <p></p>
@@ -241,9 +242,10 @@ export default function Login() {
               onSubmit={formik.handleSubmit}
             >
               <div className="test relative w-full flex flex-col ">
-                <label className="text-gray-300 bg-gray-300 animate-pulse  rounded-lg mt-2 h-2 w-1/3 font-medium" htmlFor="email">
-
-                </label>
+                <label
+                  className="text-gray-300 bg-gray-300 animate-pulse  rounded-lg mt-2 h-2 w-1/3 font-medium"
+                  htmlFor="email"
+                ></label>
 
                 <input
                   className=" animate-pulse flex space-x-4 h-4 bg-gray-300 text-gray-300 rounded-lg mt-2 font-medium "
@@ -260,11 +262,10 @@ export default function Login() {
               </div>
 
               <div className=" test relative w-full flex flex-col">
-
-                <label className="text-gray-300 bg-gray-300 animate-pulse  rounded-lg mt-2 h-2 w-1/3 font-medium" htmlFor="email">
-
-
-                </label>
+                <label
+                  className="text-gray-300 bg-gray-300 animate-pulse  rounded-lg mt-2 h-2 w-1/3 font-medium"
+                  htmlFor="email"
+                ></label>
                 <input
                   className="text-gray-300 bg-gray-300 animate-pulse h-4  rounded-lg mt-2 font-medium"
                   id="password"
