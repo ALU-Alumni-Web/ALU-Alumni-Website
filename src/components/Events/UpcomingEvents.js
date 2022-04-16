@@ -1,60 +1,49 @@
-import React from "react";
-import previous from "../../assets/add.png"; //prev pic
-import next from "../../assets/add.png"; //next pic
-import "./UpcomingEvents.scss";
-import { useState } from "react";
+import React, { useState } from "react";
+import { eventData } from "./EventData";
+import classes from "./UpcomingEvents.module.scss";
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 
 export const UpcomingEvents = ({ events }) => {
-  const [current, setCurrent] = useState(0);
-  const length = events.length;
+  const [event, setEvent] = useState(0);
+  const eventLen = events.length;
 
-  const previous_event = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
-  const next_event = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
+  const nextEvent = () => {
+    setEvent(event === eventLen - 1 ? 0 : eventLen + 1);
   };
 
-  if (!Array.isArray(events) || events.length <= 0) {
-    return null;
-  }
+  const prevEvent = () => {
+    setEvent(event === 0 ? eventLen - 1 : eventLen - 1);
+  };
+
+  console.log(nextEvent);
+
   return (
-    <div className="upcoming-events">
+    <div className={classes.event_container}>
       <h1>Upcoming Events</h1>
-      <div className="events">
-        {events.map((event, index) => {
-          return (
-            <div
-              className={index === current ? "slide active" : "slide"}
-              key={index}
-            >
-              {index === current && (
-                <div className="event">
-                  <div className="previous-event">
-                    <img
-                      src={previous}
-                      alt="previous"
-                      onClick={previous_event}
-                    />
-                  </div>
-                  <div className="event-text">
-                    <h3>{event.title}</h3>
-                    <h4>{event.subtitle}</h4>
-                    <p>{event.description}</p>
-                    <button>Register</button>
-                  </div>
-                  <div className="event-image">
-                    <img src={event.image} />
-                  </div>
-                  <div className="next-event">
-                    <img src={next} alt="next" onClick={next_event} />
-                  </div>
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
+      <h2>Good read Thursday</h2>
+      <FaArrowAltCircleRight
+        className={classes.right_arrow}
+        onClick={nextEvent}
+      />
+      <FaArrowAltCircleLeft
+        className={classes.left_arrow}
+        onClick={prevEvent}
+      />
+      {eventData.map((events, index) => {
+        return (
+          <section
+            className={index === event ? "slide active" : "slide"}
+            key={index}
+          >
+            {index === event && (
+              <div className={classes.event_cover}>
+                <h2>{events.title}</h2>
+                <p>{events.description}</p>
+              </div>
+            )}
+          </section>
+        );
+      })}
     </div>
   );
 };

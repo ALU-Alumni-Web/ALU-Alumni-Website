@@ -1,12 +1,12 @@
 import React from "react";
-import "./Footer.scss";
+import classes from "./Footer.module.scss";
 
 export const Footer = (props) => {
   return (
-    <footer className="footer">
+    <footer className={classes.footer}>
       <section className="container">
-        <div className="footer__content">
-          <div className="footer__inner_text">
+        <div className={classes.footer__content}>
+          <div className={classes.footer__inner_text}>
             <h2>ALU Alumni</h2>
             <li>
               <a href="/">Join Alumni Community</a>
@@ -17,8 +17,7 @@ export const Footer = (props) => {
             <li>
               <a href="/">Donate</a>
             </li>
-
-            <div className="contact__section">
+            <div className={classes.contact__section}>
               <h3>Contact Us</h3>
               <p>
                 We’d love to have you reach out to us and would value your
@@ -27,9 +26,9 @@ export const Footer = (props) => {
             </div>
           </div>
 
-          <div className="footer__input">
+          <div className={classes.footer__input}>
             <input
-              className="input"
+              className={classes.input}
               placeholder="Enter your fullname"
               type="text"
             ></input>
@@ -39,7 +38,7 @@ export const Footer = (props) => {
           </div>
         </div>
 
-        <p className="trade_mark">
+        <p className={classes.trade_mark}>
           ® 2022 African Leadership University Alumni. All rights reserved
         </p>
       </section>

@@ -1,5 +1,5 @@
 .upcoming-events {
-    background-color: #002E6D;
+    // background-color: #002E6D;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -11,7 +11,7 @@
 
     h1 {
         font-size: 50px;
-        color: #fff;
+        // color: #fff;
         text-align: left;
         font-weight: bold;
         margin-left: 130px;
@@ -19,7 +19,6 @@
     }
 
     .events {
-
         .event {
             display: flex;
             justify-content: space-between;
@@ -100,6 +99,78 @@
                     width: 100%;
                 }
             }
+        }
+    }
+}
+
+.cover_events {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
+// events
+.event_container {
+    width: 1200px;
+    margin: auto;
+
+    .arrow_cover {
+        border: 1px solid red;
+        display: flex;
+        width: 100%;
+    }
+
+    .right_arrow {
+        // position: absolute;
+        top: 106%;
+        font-size: 3rem;
+        color: #000000;
+        z-index: 10;
+        color: #000000;
+        cursor: pointer;
+        user-select: none;
+        // border: 1px solid red;
+    }
+
+    .left_arrow {
+        // position: absolute;
+        top: 50%;
+        // left: 5px;
+        font-size: 3rem;
+        color: #000000;
+        cursor: pointer;
+        user-select: none;
+        // border: 1px solid red;
+    }
+
+    .slide {
+        opacity: 0;
+        transition-duration: 1s ease;
+    }
+
+    .slide.active {
+        opacity: 1;
+        transition-duration: 1s;
+        transform: scale(1.08);
+    }
+
+    h1 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 73px;
+    }
+
+    .event_content {
+
+
+        h2 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 37px;
         }
     }
 }
